@@ -1,16 +1,16 @@
-# lsshu/face-alpine
+# lsshu/face:alpine
 face_recognition 人脸对比和docker镜像
 
 ### 创建容器
 ```shell
-docker run --restart=always -d --name A_face_alpine -p 49100:80 lsshu/face-alpine
+docker run --restart=always -d --name A_face_alpine -p 49100:80 lsshu/face:alpine
 ```
 
 ### 其它例子
 ```shell
-docker run --restart=always -d --name A_face_alpine -p 49100:80 -e WORKERS=16 lsshu/face-alpine
-docker run --restart=always -d --name A_face_alpine -v /yao_face:/app -p 49100:80 -e WORKERS=16 lsshu/face-alpine
-docker run --restart=always -d --name A_face_alpine -v /yao_face:/app -p 49100:80 -e NOTRELOAD='--reload' -e WORKERS=1 lsshu/face-alpine
+docker run --restart=always -d --name A_face_alpine -p 49100:80 -e WORKERS=16 lsshu/face:alpine
+docker run --restart=always -d --name A_face_alpine -v /yao_face:/app -p 49100:80 -e WORKERS=16 lsshu/face:alpine
+docker run --restart=always -d --name A_face_alpine -v /yao_face:/app -p 49100:80 -e NOTRELOAD='--reload' -e WORKERS=1 lsshu/face:alpine
 ```
 
 ### 删除容器
@@ -20,7 +20,7 @@ docker stop A_face_alpine && docker rm A_face_alpine
 
 ### 删除镜像
 ```shell
-docker rmi lsshu/face-alpine
+docker rmi lsshu/face:alpine
 ```
 
 ### 测试是否安装成功
@@ -41,12 +41,12 @@ docker build -t face .
 ## 发布docker镜像
 ### 1.构建Docker镜像
 ```shell
-docker build -t face-alpine .
+docker build -t face:alpine .
 ```
 
 ### 2.标记镜像
 ```shell
-docker tag face-alpine lsshu/face-alpine:latest
+docker tag face:alpine lsshu/face:alpine
 ```
 
 ### 3.登录到Docker Hub
@@ -56,5 +56,5 @@ docker login -u <your-docker-username> -p <your-password>
 
 ### 4.推送镜像到Docker Hub
 ```shell
-docker push lsshu/face-alpine:latest
+docker push lsshu/face:alpine
 ```

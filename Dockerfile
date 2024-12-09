@@ -6,4 +6,4 @@ LABEL org.opencontainers.image.authors="Lsshu" org.opencontainers.image.email="a
 RUN apk update && apk add --no-cache build-base cmake  freetype-dev jpeg-dev zlib-dev libwebp-dev boost-libs ffmpeg-dev pkgconfig libffi-dev
 RUN pip install dlib numpy==1.26.4 opencv-python face_recognition fastapi uvicorn
 ENV HOST="0.0.0.0" PORT=80 LOG_LEVEL="warning" WORKERS=4 NOTRELOAD=""
-CMD ["uvicorn","main:app","--host","${HOST}","--port","${PORT}","${NOTRELOAD}","--log-level","${LOG_LEVEL}","--workers","${WORKERS}"]
+CMD uvicorn main:app --host ${HOST} --port ${PORT} ${NOTRELOAD} --log-level ${LOG_LEVEL} --workers ${WORKERS}
