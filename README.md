@@ -41,12 +41,12 @@ docker build -t face .
 ## 发布docker镜像
 ### 1.构建Docker镜像
 ```shell
-docker build -t face .
+docker build -t face-alpine .
 ```
 
 ### 2.标记镜像
 ```shell
-docker tag face lsshu/face-alpine:latest
+docker tag face-alpine lsshu/face-alpine:latest
 ```
 
 ### 3.登录到Docker Hub
