@@ -3,19 +3,19 @@ face_recognition 人脸对比和docker镜像
 
 ### 创建容器
 ```shell
-docker run --restart=always -d --name A_yao_face -p 49000:80 lsshu/face-alpine
+docker run --restart=always -d --name A_face_alpine -p 49100:80 lsshu/face-alpine
 ```
 
 ### 其它例子
 ```shell
-docker run --restart=always -d --name A_yao_face -p 49000:80 -e WORKERS=16 lsshu/face-alpine
-docker run --restart=always -d --name A_yao_face -v /yao_face:/app -p 49000:80 -e WORKERS=16 lsshu/face-alpine
-docker run --restart=always -d --name A_yao_face -v /yao_face:/app -p 49000:80 -e NOTRELOAD='--reload' -e WORKERS=1 lsshu/face-alpine
+docker run --restart=always -d --name A_face_alpine -p 49100:80 -e WORKERS=16 lsshu/face-alpine
+docker run --restart=always -d --name A_face_alpine -v /yao_face:/app -p 49100:80 -e WORKERS=16 lsshu/face-alpine
+docker run --restart=always -d --name A_face_alpine -v /yao_face:/app -p 49100:80 -e NOTRELOAD='--reload' -e WORKERS=1 lsshu/face-alpine
 ```
 
 ### 删除容器
 ```shell
-docker stop A_yao_face && docker rm A_yao_face
+docker stop A_face_alpine && docker rm A_face_alpine
 ```
 
 ### 删除镜像
