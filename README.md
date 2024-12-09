@@ -25,12 +25,12 @@ docker rmi lsshu/face-alpine
 
 ### 测试是否安装成功
 ```http request
-http://127.0.0.1:49000/
+http://127.0.0.1:49100/
 ```
 
 ### 测试对比人脸文档
 ```http request
-http://127.0.0.1:49000/docs
+http://127.0.0.1:49100/docs
 ```
 
 ### 可能使用到的使用命令 创建镜像
