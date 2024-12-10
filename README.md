@@ -35,7 +35,7 @@ http://127.0.0.1:49100/docs
 
 ### 可能使用到的使用命令 创建镜像
 ```shell
-docker build -t face .
+docker build -t face:alpine .
 ```
 
 ## 发布docker镜像
